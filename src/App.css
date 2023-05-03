@@ -1,0 +1,24 @@
+/* Style for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the links */
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  /* Style for the shopping cart icon */
+  .navbar .shopping-cart {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
