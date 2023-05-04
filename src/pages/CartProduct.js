@@ -1,9 +1,10 @@
 // @flow strict
 
 import * as React from 'react';
-/*I have passed handleRemove as props from cart*/
 
-function CartProduct({cartProduct,handleRemove}) {
+
+function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,setCount}) {
+    
 
     return (
         <div className='cart-title'>
@@ -19,8 +20,9 @@ function CartProduct({cartProduct,handleRemove}) {
                 <h5>{cartProduct.price}</h5>
                 {/*I have added the three buttons below */}
                 <button onClick={()=>handleRemove(cartProduct)}>Remove from Cart</button>
-                <button>+</button>
+                <button onClick={()=>handleAddCartItem}>+</button>
                 <button>-</button>
+                <p>Items :<span>{setCount(count)}</span></p>
                 
             </div>
         </div>
