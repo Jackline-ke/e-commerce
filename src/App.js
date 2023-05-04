@@ -5,6 +5,7 @@ import React, {useState, useEffect} from 'react';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
+import SearchBar from './pages/SearchBar';
 
 function App() {
   const [products, setProducts] = useState([])
@@ -32,6 +33,8 @@ function App() {
         <Router>
         {/* call Navbar */}
         <Navbar />
+        
+        <SearchBar/>
         
 
         
