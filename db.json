@@ -79,7 +79,7 @@
         "category": "Laptops",
         "description": "The XPS 13 is a premium ultrabook with a 13.4-inch 16:10 display, 11th Gen Intel Core processors, and up to 16GB of RAM and 2TB of storage.",
         "price": 999,
-        "image": "https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/xps_notebooks/13_9310_non_touch/v2/xps-13-9310-laptop-pdp-design-gallery-hero-504x350-v2.jpg?fmt=jpg"
+        "image": "https://i.pinimg.com/236x/f5/95/1b/f5951b5564d563e51f53a5cdec268815.jpg"
       },
       {
         "id": 11,
@@ -88,7 +88,7 @@
         "category": "TVs",
         "description": "The OLED CX is a high-end 4K TV with a 120Hz refresh rate, HDMI 2.1, and support for Dolby Vision IQ and Dolby Atmos.",
         "price": 1999,
-        "image": "https://www.lg.com/us/images/tvs/md07501893/gallery/desktop-01.jpg"
+        "image": "https://i.pinimg.com/236x/2f/8e/ec/2f8eecc61d52ee4f88cb0552e000f0f4.jpg"
       }
     ]
 }
