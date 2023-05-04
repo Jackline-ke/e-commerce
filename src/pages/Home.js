@@ -1,13 +1,13 @@
 // @flow strict
 
-import * as React from 'react';
+import React from 'react';
 import ProductList from './ProductList';
 
-function Home({products}) {
-
+function Home({products, handleClick}) {
+   
     const productItems = products.map(product =>{
         return(
-            <ProductList key={product.id} product={product}/>
+            <ProductList key={product.id} product={product} handleClick={handleClick}/>
         )
     })
     return (

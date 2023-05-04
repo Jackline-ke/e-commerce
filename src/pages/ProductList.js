@@ -1,14 +1,19 @@
 // @flow strict
-import * as React from 'react';
+import React from 'react';
 
-function ProductList({product}) {
+function ProductList({product, handleClick}) {
+    const {id, image, name, category, price} = product;
+
     return (
-        <div>
+        <div className='product'>
             <div className='product-list'>
-                <img src={product.image}/>
-                <h2>{product.name}</h2>
-                <h3>{product.category}</h3>
-                <h3>{product.price}</h3>
+                <img src={image}/>
+                <div className='description'>
+                    <h2>{name}</h2>
+                    <h3>{category}</h3>
+                    <h3>{price}</h3>
+                    <button className='add-to-cart' onClick={() => handleClick(product)}>Add To Cart</button>
+                </div>
             </div>
         </div>
     );

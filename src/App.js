@@ -6,8 +6,10 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 
 function App() {
-  const [products, setProducts] = useState([]);
-  
+  const [products, setProducts] = useState([])
+  const [show, setShow] = useState([])
+  const [cart, setCart] = useState([])
+
   // fetch data
   useEffect(() => {
     fetch('http://localhost:3000/products')
@@ -15,17 +17,23 @@ function App() {
     .then(data => setProducts(data));
   }, []);
 
+  const handleClick = (product) => {
+      cart.push(product)
+      console.log(cart)
+  }
+
+ 
   return (
     <div className="App">
-      {/* use Router to aid in navigation inside the application */}
-      <Router>
+        {/* use Router to aid in navigation inside the application */}
+        <Router>
         {/* call Navbar */}
         <Navbar />
-        <Routes>
-          <Route path='/' element={< Home products={products}/>}/>
-          <Route path='/Cart' element={< Cart />}/>
-        </Routes>
-      </Router>
+          <Routes>
+            <Route path='/' element={< Home products={products} handleClick={handleClick}/> } />
+            <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} />}/>
+          </Routes>
+        </Router>
     </div>
   );
 }
