@@ -5,11 +5,13 @@ import React, {useState, useEffect} from 'react';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
-import SearchBar from './pages/SearchBar';
+
 
 function App() {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
+  
+
 
   // fetch data
   useEffect(() => {
@@ -33,11 +35,6 @@ function App() {
         <Router>
         {/* call Navbar */}
         <Navbar />
-        
-        <SearchBar/>
-        
-
-        
           <Routes>
             <Route path='/' element={< Home products={products} handleClick={handleClick}/> } />
             <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} handleClick={handleClick} handle />}/>
