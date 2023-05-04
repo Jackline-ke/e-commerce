@@ -4,7 +4,7 @@ function Header(){
       
     <img 
     class="headerImg"
-    src="src/images/details.jpg"
+    src="src/images/headerimage.jpg"
     alt= "details">
 
     </img>

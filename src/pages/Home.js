@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ProductList from './ProductList';
-import Details from '../components/Details';
+
 
 function Home({products, handleClick}) {
    
