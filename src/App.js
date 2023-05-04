@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Details from './components/Details';
+import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import Home from './pages/Home';
@@ -30,7 +30,7 @@ function App() {
         <Router>
         {/* call Navbar */}
         <Navbar />
-        <Details />
+        <Header/>
           <Routes>
             <Route path='/' element={< Home products={products} handleClick={handleClick}/> } />
             <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} />}/>

@@ -1,9 +1,9 @@
-function Details(){
+function Header(){
     return(
-     <div class="details"> 
+     <div class="header"> 
       
     <img 
-    class="detailsImg"
+    class="headerImg"
     src="src/images/details.jpg"
     alt= "details">
 
@@ -14,4 +14,4 @@ function Details(){
     )
 }
 
-export default Details;
+export default Header;
