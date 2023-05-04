@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import Footer from './components/Footer';
 
 function App() {
   const [products, setProducts] = useState([])
@@ -31,10 +32,14 @@ function App() {
         <Router>
         {/* call Navbar */}
         <Navbar />
+        
+
+        
           <Routes>
             <Route path='/' element={< Home products={products} handleClick={handleClick}/> } />
             <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} handleClick={handleClick} />}/>
           </Routes>
+          <Footer/>
         </Router>
     </div>
   );
