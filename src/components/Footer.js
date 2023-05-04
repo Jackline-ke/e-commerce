@@ -32,7 +32,7 @@ function Footer() {
             </ul>
         </div>
         </div>
-    </div>
+    </div>x
 
     </footer>
   );

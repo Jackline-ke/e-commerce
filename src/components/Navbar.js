@@ -5,12 +5,19 @@ import { ShoppingCart } from 'phosphor-react';
 
 function Navbar() {
     return (
-        <div className='navbar'>
-            <Link to="/">Home</Link>
-            <Link to="/Cart">
-                <ShoppingCart />
-            </Link>
+        <div className='nav-container'>
+            <div className='navbar'>
+                <div className='nav-links'>
+                    <Link to="/">Home</Link>
+                    <Link to="/Account">Account</Link>
+                    <Link to="/Contact">Contact Us</Link>
+                    <Link to="/Cart">
+                        <ShoppingCart />
+                    </Link>
+                </div>
+            </div>
         </div>
+        
     );
 };
 
