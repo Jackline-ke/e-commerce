@@ -9,13 +9,16 @@ import Account from './pages/Account';
 import Contact from './pages/Contact';
 import LandingPage from './components/LandingPage';
 
+
 function App() {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
+  
+
 
   // fetch data
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch(' http://localhost:8000/products')
     .then(res => res.json())
     .then(data => setProducts(data));
   }, []);
