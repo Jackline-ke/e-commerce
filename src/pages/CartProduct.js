@@ -1,9 +1,19 @@
 // @flow strict
 
 import * as React from 'react';
+import { useState } from 'react';
 
 
-function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,setCount,handleReduceCartItem}) {
+function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,handleReduceCartItem}) {
+    /*The following will calculate the price of each cart item*/
+    const[price,setPrice]=useState(Number)
+
+    const handlePrice=(price)=>{
+       const cartItemCost =parseFloat(cartProduct.price)
+       return(
+           setPrice(count*cartItemCost)
+       )
+    }
     
 
     return (
@@ -18,12 +28,13 @@ function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,setCount,
                 <h4>{cartProduct.name}</h4>
                 <h5>{cartProduct.category}</h5>
                 <h5>{cartProduct.price}</h5>
-                {/*I have added the three buttons below */}
+                {/*I have added the four buttons below */}
                 <button onClick={()=>handleRemove(cartProduct)}>Remove from Cart</button>
                 <button onClick={handleAddCartItem}>+</button>
                 <button onClick={handleReduceCartItem}>-</button>
                 <p>Items :<span>{count}</span></p>
-                
+                <button onClick={()=>handlePrice(cartProduct.price)}>Calculate Price</button>
+                <p>Price :<span>{price}</span></p>
             </div>
         </div>
         </div> 
