@@ -7,7 +7,6 @@ import Cart from './pages/Cart';
 
 function App() {
   const [products, setProducts] = useState([])
-  const [show, setShow] = useState([])
   const [cart, setCart] = useState([])
 
   // fetch data
@@ -17,12 +16,15 @@ function App() {
     .then(data => setProducts(data));
   }, []);
 
-  const handleClick = (product) => {
-      cart.push(product)
-      console.log(cart)
+
+  const handleClick = (product, isInCart) => {
+    if (cart.includes(product) && isInCart === true) {
+      setCart(cart.filter(({id}) => id !== product.id))
+    } else if (cart.includes(product) === false) {
+      setCart(cart => [...cart, product])
+    }
   }
 
- 
   return (
     <div className="App">
         {/* use Router to aid in navigation inside the application */}
@@ -31,7 +33,7 @@ function App() {
         <Navbar />
           <Routes>
             <Route path='/' element={< Home products={products} handleClick={handleClick}/> } />
-            <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} />}/>
+            <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} handleClick={handleClick} />}/>
           </Routes>
         </Router>
     </div>
