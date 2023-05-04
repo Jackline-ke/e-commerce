@@ -6,13 +6,16 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Footer from './components/Footer';
 
+
 function App() {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
+  
+
 
   // fetch data
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch(' http://localhost:8000/products')
     .then(res => res.json())
     .then(data => setProducts(data));
   }, []);
@@ -32,12 +35,9 @@ function App() {
         <Router>
         {/* call Navbar */}
         <Navbar />
-        
-
-        
           <Routes>
             <Route path='/' element={< Home products={products} handleClick={handleClick}/> } />
-            <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} handleClick={handleClick} />}/>
+            <Route path='/Cart' element={< Cart setCart={setCart} cart={cart} handleClick={handleClick} handle />}/>
           </Routes>
           <Footer/>
         </Router>
