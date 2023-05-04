@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 
-function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,setCount}) {
+function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,setCount,handleReduceCartItem}) {
     
 
     return (
@@ -20,9 +20,9 @@ function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,setCount}
                 <h5>{cartProduct.price}</h5>
                 {/*I have added the three buttons below */}
                 <button onClick={()=>handleRemove(cartProduct)}>Remove from Cart</button>
-                <button onClick={()=>handleAddCartItem}>+</button>
-                <button>-</button>
-                <p>Items :<span>{setCount(count)}</span></p>
+                <button onClick={handleAddCartItem}>+</button>
+                <button onClick={handleReduceCartItem}>-</button>
+                <p>Items :<span>{count}</span></p>
                 
             </div>
         </div>

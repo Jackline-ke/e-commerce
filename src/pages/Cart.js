@@ -7,16 +7,14 @@ import { useState } from 'react';
 
 function Cart({cart,setCart, handleClick}) {
     /*The following will track number of items added*/
-    const [count, setCount]=useState(0)
+    const [count, setCount]=useState(Number)
     
 
-    const handleAddCartItem=()=>{
-        console.log(count)
-        return(
-        setCount(count+1)
-        );
-    }
+    const handleAddCartItem=()=>setCount(count +1)
+    
 
+    const handleReduceCartItem=()=>setCount(count -1)
+        
    
 
     /*function to handle remove from cart button*/
@@ -32,7 +30,7 @@ function Cart({cart,setCart, handleClick}) {
         return(
             < CartProduct key={cartProduct.id} cartProduct={cartProduct} handleClick={handleClick} isInCart={false} 
             handleRemove={handleRemove}  handleAddCartItem={handleAddCartItem} count={count}
-            setCount={setCount}/>/*handleRemove prop added */
+            setCount={setCount} handleReduceCartItem={handleReduceCartItem}/>/*handleRemove prop added */
         )
     })
     return (
