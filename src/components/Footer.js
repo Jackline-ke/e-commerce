@@ -16,7 +16,7 @@ function Footer() {
             <ul>
               <li className="footer-links">
                 <a href="https://www.facebook.com/">Facebook</a>
-                <img src="public/facebook.png" />
+                
                 </li>
                 
               <li className="footer-links"><a href="https://twitter.com/">Twitter</a></li>
