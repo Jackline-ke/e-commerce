@@ -6,7 +6,7 @@ return(
       <input
           className="searchbar" 
           type="text" 
-          placeholder="Search name..."
+          placeholder="Search description..."
           value={searchTerm}
           onChange={onSearchChange}
       >

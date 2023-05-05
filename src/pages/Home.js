@@ -32,7 +32,7 @@ function Home({products, handleClick}) {
       const filteredProducts = products.filter((product) => {
         console.log('search', { products });
         if (searchTerm) {
-          return product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase());
+          return product.description.toLowerCase().includes(searchTerm.toLocaleLowerCase());
         }
         return true;
       });
