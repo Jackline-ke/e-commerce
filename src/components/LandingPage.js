@@ -8,7 +8,7 @@ function LandingPage() {
         <div className='row-container'>
             <div className='row'>
                 <div className='col-2'>
-                <h1>Technology is best <br /> It brings people together</h1>
+                <h1>Technology is the best <br /> It brings people together</h1>
                 <p>It is only when they go wrong that machines <br /> Remind you how powerful they are.</p>
                 
             </div>
