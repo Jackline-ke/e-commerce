@@ -11,7 +11,7 @@ function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,handleRed
     const handlePrice=(price)=>{
        const cartItemCost =parseFloat(cartProduct.price)
        return(
-           setPrice(count*cartItemCost)
+           setPrice(Math.ceil(count*cartItemCost))
        )
     }
     
@@ -34,7 +34,7 @@ function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,handleRed
                 <button onClick={handleReduceCartItem}>-</button>
                 <p>Items :<span>{count}</span></p>
                 <button onClick={()=>handlePrice(cartProduct.price)}>Calculate Price</button>
-                <p>Price :<span>{price}</span></p>
+                <p>Price :<span>${price}</span></p>
             </div>
         </div>
         </div> 
