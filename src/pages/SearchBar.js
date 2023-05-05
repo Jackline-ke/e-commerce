@@ -1,18 +1,18 @@
 function SearchBar({searchTerm,onSearchChange}){
 return(
     /*I have styled the searchbar using its id*/
-   <>
-      <label className="searchbar">Search</label>
+    <div className="search">
       <input
           className="searchbar" 
           type="text" 
-          placeholder="Search name..."
+          placeholder="Search Product..."
           value={searchTerm}
           onChange={onSearchChange}
       >
       
       </input>
-   </>
+    </div>
+   
 
 )
 }

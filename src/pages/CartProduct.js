@@ -17,26 +17,25 @@ function CartProduct({cartProduct,handleRemove,handleAddCartItem,count,handleRed
     
 
     return (
-        <div className='cart-title'>
-        <h2>Cart</h2>
-        <div className='card'>
+        <div className='cart'>
+       
             <div className='image'>
                 <img src={cartProduct.image}
                      alt={cartProduct.name}  /> {/* I have added alt attribute*/}
             </div>
             <div className='card-description'>
                 <h4>{cartProduct.name}</h4>
-                <h5>{cartProduct.category}</h5>
-                <h5>{cartProduct.price}</h5>
+                <p>{cartProduct.category}</p>
+                <p>{cartProduct.price}</p>
                 {/*I have added the four buttons below */}
-                <button onClick={()=>handleRemove(cartProduct)}>Remove from Cart</button>
-                <button onClick={handleAddCartItem}>+</button>
-                <button onClick={handleReduceCartItem}>-</button>
-                <p>Items :<span>{count}</span></p>
-                <button onClick={()=>handlePrice(cartProduct.price)}>Calculate Price</button>
+                <button className="add-to-cart" onClick={()=>handleRemove(cartProduct)}>Remove from Cart</button>
+                <button className="add" onClick={handleAddCartItem}>+</button>
+                <button className="add" onClick={handleReduceCartItem}>-</button>
+                <h3>Items :<span>{count}</span></h3>
+                <button className="add-to-cart" onClick={()=>handlePrice(cartProduct.price)}>Calculate Price</button>
                 <p>Price :<span>{price}</span></p>
             </div>
-        </div>
+      
         </div> 
     );
 };

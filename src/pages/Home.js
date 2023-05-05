@@ -4,6 +4,10 @@ import React from 'react';
 import ProductList from './ProductList';
 import SearchBar from './SearchBar';
 import { useState } from 'react';
+import LandingPage from '../components/LandingPage';
+import Feature from '../components/Feature';
+import Offer from '../components/Offer';
+import Footer from '../components/Footer';
 /*I have added productsToDisplay as a prop and imported useState to track state of search term */
 
 function Home({products, handleClick}) {
@@ -45,12 +49,18 @@ function Home({products, handleClick}) {
         )})
       /* I have rendered SearchBar here and changed productItems to productItemsToDisplay*/
     return (
-     <>
-        <SearchBar onSearchChange={onSearchChange} productItemsToDisplay={productItemsToDisplay}/>
+     <div className='home'>
+      <div className='homepage'>
+          <SearchBar onSearchChange={onSearchChange} productItemsToDisplay={productItemsToDisplay}/>
+          <LandingPage /> 
+      </div>
+      <Feature />
         <div>
          {productItemsToDisplay}
         </div>
-     </>   
+     
+      <Footer />
+     </div>  
     );
 };
 

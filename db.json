@@ -89,6 +89,15 @@
         "description": "The OLED CX is a high-end 4K TV with a 120Hz refresh rate, HDMI 2.1, and support for Dolby Vision IQ and Dolby Atmos.",
         "price": 1999,
         "image": "https://i.pinimg.com/236x/2f/8e/ec/2f8eecc61d52ee4f88cb0552e000f0f4.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Electronic Humidifior",
+        "brand": "LG",
+        "category": "Air Freshner",
+        "description": "Brighten your day will a nice smell",
+        "price": 1999,
+        "image": "https://i.pinimg.com/236x/64/1b/6f/641b6f49c3626d5f835b13ed0afa9273.jpg"
       }
     ]
 }
