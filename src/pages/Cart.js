@@ -7,13 +7,10 @@ import { useState } from 'react';
 
 function Cart({cart,setCart, handleClick}) {
     /*The following will track number of items added*/
-    const [count, setCount]=useState(Number)
+    const [count, setCount]=useState(1)
      const handleAddCartItem=()=>setCount(count +1)
      const handleReduceCartItem=()=>setCount(count -1)
      
-        
-   
-
     /*function to handle remove from cart button*/
     const handleRemove = (cartProduct) => {
         console.log("Remove button clicked");
